@@ -1,14 +1,12 @@
 def catalogue(products):
     for product in products:
-        print(product.name)
-        print(product.price)
-        print(product.stock)
-    pass
+        print(product)
 
 
-def ticket():
-    pass
+def ticket(client):
+    print(client)
 
 
-def assessment ():
-    pass
+def assessment (clientel):
+    for client in clientel:
+        ticket(client)
