@@ -4,3 +4,6 @@ class Produc:
         self.type = type
         self.stock = stock
         self.price = price
+        
+    def buy(self, achat):
+        self.stock -= achat.stock
