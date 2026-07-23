@@ -71,45 +71,29 @@ def user_input(products):  #on a besoin de connaitre la liste des produits dispo
     if choix == "2":
         return None
 
-    while True:     #sert a redemander la produit si ne trouve pas de produit correspondant
-
-        product_name = input("Produit souhaité : ")  #recherche dans une liste d'objets, ex pomme on retrouve ses attributs dans product
+    product_name = input("Produit souhaité : ")  #recherche dans une liste d'objets, ex pomme on retrouve ses attributs dans product
 
 #Cherche dans la liste products le produit dont le nom correspond à ce que le client a écrit. Si tu le trouves, mets-le dans product. Sinon, mets None.4
 # product = Je vais stocker le résultat de ma recherche dans une variable appelée product
-
-        product = next(
-            (p for p in products if p.name.lower() == product_name.lower()),   #On teste chaque produit en mettant toutes les lettres en petit
-            None
-        )
+    product = next(
+        (p for p in products if p.name.lower() == product_name.lower()),   #On teste chaque produit en mettant toutes les lettres en petit
+        None
+    )
     #boucle écrite à l'envers, premier tour p = Product("Pomme") puis 2eme ("Orange), etc
     #products c est la liste du magasin
     #"Pour chaque élément de la liste products, je vais l'appeler temporairement p."
     #"Donne-moi le produit p seulement si la condition est vraie."
     #next c'est comme un break dans une boucle classique, ca donne le premier element trouvé et arrete la recherche
 
-        if product is None:  #Si tu ne trouves rien, retourne None et ecris ce produit n existe pas
-            print("Ce produit n'existe pas. Veuillez réessayer.")
-            continue
+    if product is None:  #Si tu ne trouves rien, retourne None et ecris ce produit n existe pas
+        print("Ce produit n'existe pas.")
+        return None
 
-        while True:    #sert uniquement à redemander la quantité
-
-            try:    #Essaie d'exécuter ce code
-                quantity = float(input("Quantité souhaitée : "))  #float transforme le texte en nombre car dans l input 2 est une chaine de caractere pas un nombre et qu'il faut accepter les nombres avec virgule (ex : 1,7 kg)
-            except ValueError:      #Au lieu d'arrêter le programme, il va directement dans ValueError
-                print("Veuillez entrer un nombre.")
-                continue
-
-            if quantity <= 0:
-                print("La quantité doit être positive.")
-                continue
-
-            break  #La quantité est valide, je peux sortir de cette boucle de quantité
+    quantity = float(input("Quantité souhaitée : "))  #float transforme le texte en nombre car dans l input 2 est une chaine de caractere pas un nombre et qu'il faut accepter les nombres avec virgule (ex : 1,7 kg)
 
     achat = Achat(product, quantity)  #Avant un avait product et quantity separés, maintenant on fabrique : Achat(product, quantity) donc Python appelle classe Achat
     #Python cree une variable locale et quand la fonction arrive à la fin, Python va supprimer ce qu'il y avait dans cette boîte
     #donc si on ne fait rien le programme crée l'achat puis le perd c est pour ca qu'on fait un return
 
-    return achat   #Renvoie l'objet Achat créé à la fonction main() qui l'avait demandé avec : achat = user_input(products)
-                   #donc main() recoit le resultat via la variable achat
+    return achat   #la fonction doit donner le resultat a qq un et c est logique que ca soit a Achat
                    #achat = user_input(products)

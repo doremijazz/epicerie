@@ -18,7 +18,7 @@ class Client:
 
     def buy(self, achat, client):
         self.ticket.append(achat)
-        self.total_price = achat.total_price(achat)
+        self.total_price = achat.total_price()
 
     def total_price(self):   #on est dans la classe Client donc self designe un client
         total = 0  #on va additionner plusieurs prix mais au début on n'a encore rien additionné
