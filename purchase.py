@@ -7,9 +7,9 @@ class Achat:        #nouveau type d'objet
 
     def __str__(self):
         return (
-            f"{self.produit.name} : "
-            f"{self.quantite} {self.produit.unit} - "
-            f"{self.calculer_prix():.2f} €"
+            f"{self.product.name} : "
+            f"{self.quantity} {self.product.unit} - "
+            f"{self.total_price():.2f} €"
         )
 
 #methode calcul achat
