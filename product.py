@@ -11,6 +11,10 @@ class Product:
             f"{self.name} : {self.stock} {self.unit}, "
             f"{self.price:.2f} €/{self.unit}"
         )
-        
+
+        #methode diminution de stock
     def buy(self, achat):
         self.stock -= achat.stock
+
+
+    def
