@@ -48,7 +48,18 @@ def main(products):
 
 #pour gérer l'arrivée d'un client le programme demande nom et prenom
 #La fonction représente l'interaction avec l'utilisateur
-def start_input():         #creer une fonction sans parametre car elle recup les info direct avec l'input
+def start_input():   #creer une fonction sans parametre car elle recup les info direct avec l'input
+    
+    choix = input(
+        "1 - Nouveau client\n"
+        "2 - Terminer la journée\n"
+        "Votre choix : "
+    )
+
+    if choix == "2":
+        return None
+    
+    
     name = input("Nom du client : ")
 
     surname = input("Prénom du client : ")
