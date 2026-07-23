@@ -1,4 +1,4 @@
-from Produc import Product
+from product import Product
 
 products = [
     # Fruits
