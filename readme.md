@@ -20,14 +20,14 @@ Aucune bibliothèque externe n'est nécessaire.
 
 ## Structure du projet
 
-'''
+```text
 ├── main.py       # Logique principale et déroulement des ventes
 ├── product.py    # Classe Product représentant un produit
 ├── purchase.py   # Classe Achat représentant une ligne d'achat
 ├── client.py     # Classe Client et gestion de son ticket
 ├── display.py    # Fonctions d'affichage
 └── test.py       # Catalogue de fruits et légumes utilisé pour les tests
-'''
+```
 ## Modèle de données
 
 ### Produit
