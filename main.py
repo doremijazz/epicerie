@@ -1,5 +1,7 @@
 import display
-
+from client import Client
+from purchase import Achat
+from product import Product
 
 def is_in_stock(product, achat):
     return product.stock >= achat.quantity   #ex : stock 8kg quantite demandee 2kg, 8 >= 2 True donc vente possible
@@ -7,7 +9,7 @@ def is_in_stock(product, achat):
 
 def buy_product(product, achat, client): 
     product.buy(achat)
-    client.buy(achat)
+    client.buy(achat,client)
 
 
 def sell_product(product, achat, client):
@@ -16,7 +18,7 @@ def sell_product(product, achat, client):
 
         print("Achat ajouté au panier.")
 
-        else:
+    else:
 
         print("Stock insuffisant.")
 
@@ -32,14 +34,14 @@ def main(products):
 
         while True:    #boucle du panier
             display.catalogue(products)
-            achat = user_input()
+            achat = user_input(products)
 
             if achat is None:
                 display.ticket(client)
                 clientel.append(client)
                 break
 
-            sell_product(achat.produit, achat, client)
+            sell_product(achat.product, achat, client)
 
             clientel.append(client)
 
