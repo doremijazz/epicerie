@@ -7,7 +7,7 @@ class Product:
         self.unit = unit
 
     def __str__(self):
-        print(
+        return (
             f"{self.name} : {self.stock} {self.unit}, "
             f"{self.price:.2f} €/{self.unit}"
         )

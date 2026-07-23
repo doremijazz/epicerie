@@ -32,7 +32,7 @@ def main(products):
                 display.ticket(client)
                 break
 
-            produit = next(
+            product = next(
                 (p for p in products if p.name == achat.name),
                 None
             )
