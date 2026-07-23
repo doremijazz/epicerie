@@ -1,4 +1,5 @@
 from product import Product
+from main import main
 
 products = [
     # Fruits
@@ -25,3 +26,5 @@ products = [
     Product("Radis noir", "Légume", 10, 5.00, "pièce"),
     Product("Salsifis", "Légume", 3, 2.50, "kg"),
 ]
+
+main(products)
