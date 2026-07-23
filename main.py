@@ -2,10 +2,10 @@ import display
 
 
 def is_in_stock(product, achat):
-    return product.stock >= achat.stock
+    return product.stock >= achat.quantity
 
 
-def buy_product(product, achat, client):
+def buy_product(product, achat, client): 
     product.buy(achat)
     client.buy(achat)
 

@@ -14,7 +14,4 @@ class Product:
 
         #methode diminution de stock
     def buy(self, achat):
-        self.stock -= achat.stock
-
-
-    def
+        self.stock -= achat.quantity

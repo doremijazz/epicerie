@@ -5,8 +5,14 @@ def catalogue(products):
 
 def ticket(client):
     print(client)
+    for achat in client.ticket :
+        print(achat)
+    print(client.total_price)
 
 
 def assessment (clientel):
+    total_price = 0
     for client in clientel:
         ticket(client)
+        total_price += client.total_price
+    print(total_price)
