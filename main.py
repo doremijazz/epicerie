@@ -16,7 +16,7 @@ def sell_product(product, achat, client):
 
         print("Achat ajouté au panier.")
 
-        else:
+    else:
 
         print("Stock insuffisant.")
 

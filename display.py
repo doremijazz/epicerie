@@ -1,3 +1,6 @@
+#affichage
+#ne contient que des fonctions qui affichent quelque chose à l'écran
+
 def catalogue(products):
     for product in products:
         print(product)
