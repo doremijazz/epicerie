@@ -12,8 +12,6 @@ def buy_product(product, achat, client):
 
     client.buy(achat, client)
 
-    client.buy(achat, client)
-
 
 
 def sell_product(product, achat, client):
