@@ -1,7 +1,5 @@
 import display
-from client import Client
-from purchase import Achat
-from product import Product
+
 
 
 def is_in_stock(product, achat):
@@ -10,7 +8,11 @@ def is_in_stock(product, achat):
 
 def buy_product(product, achat, client):
     product.buy(achat)
+<<<<<<< HEAD
     client.buy(achat, client)
+=======
+    client.buy(achat)
+>>>>>>> 4cc68ab37ce70d23058d9ec3366ebdd0214d547b
 
 
 def sell_product(product, achat, client):
@@ -35,20 +37,21 @@ def main(products):
 
         while True:  #boucle du panier
             display.catalogue(products)
-            achat = user_input(products)
+            achat = user_input()
 
             if achat is None:
                 display.ticket(client)
                 clientel.append(client)
                 break
 
-            sell_product(achat.product, achat, client)
+            sell_product(achat.produit, achat, client)
 
             clientel.append(client)
 
 
 #pour gérer l'arrivée d'un client le programme demande nom et prenom
 #La fonction représente l'interaction avec l'utilisateur
+<<<<<<< HEAD
 def start_input():  #creer une fonction sans parametre car elle recup les info direct avec l'input
 
     choix = input(
@@ -60,6 +63,9 @@ def start_input():  #creer une fonction sans parametre car elle recup les info d
     if choix == "2":
         return None
 
+=======
+def start_input():         #creer une fonction sans parametre car elle recup les info direct avec l'input
+>>>>>>> 4cc68ab37ce70d23058d9ec3366ebdd0214d547b
     name = input("Nom du client : ")
 
     surname = input("Prénom du client : ")
@@ -112,5 +118,10 @@ def user_input(products):  #on a besoin de connaitre la liste des produits dispo
     #Python cree une variable locale et quand la fonction arrive à la fin, Python va supprimer ce qu'il y avait dans cette boîte
     #donc si on ne fait rien le programme crée l'achat puis le perd c est pour ca qu'on fait un return
 
+<<<<<<< HEAD
     return achat  #la fonction doit donner le resultat a qq un et c est logique que ca soit a Achat
     #achat = user_input(products)
+=======
+    return achat   #la fonction doit donner le resultat a qq un et c est logique que ca soit a Achat
+                   #achat = user_input(products)
+>>>>>>> 4cc68ab37ce70d23058d9ec3366ebdd0214d547b
