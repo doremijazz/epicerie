@@ -8,12 +8,6 @@ class Client:
     def __str__(self):          #Une méthode __str__ doit retourner une chaîne
 
         texte = f"Ticket de {self.name} {self.surname}\n"
-
-        for achat in self.ticket:
-            texte += str(achat) + "\n"
-
-        texte += f"Total : {self.total_price():.2f} €"
-
         return texte
 
     def buy(self, achat, client):
